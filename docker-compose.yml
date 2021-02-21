@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  traefik:
+    container_name: traefik
+    image: traefik:1.7
+    restart: always
+    networks:
+      - web
+    ports:
+      - 80:80
+      - 443:443
+      - 9080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik.toml:/traefik.toml
+      - ./data:/data
+
+networks:
+  web:
+    external: true
