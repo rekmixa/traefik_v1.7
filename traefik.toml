@@ -16,7 +16,7 @@ watch = true
 exposedByDefault = false
 
 [acme]
-email = "admin@mediaten.ru"
+email = "admin@anthms.site"
 storage = "/data/acme.json"
 onHostRule = true
 entryPoint = "https"
